@@ -1,0 +1,56 @@
+{
+
+	"info": {
+		"title": "abc",
+		"description": "this is a sample swagger definition.",
+		"termsOfService": "http://swagger.io/terms/",
+		"contact": {
+			"name": "API Support",
+			"url": "http://www.swagger.io/support",
+			"email": "support@swagger.io"
+		},
+		"license": {
+			"name": "Apache 2.0",
+			"url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+		},
+		"version": "1.0.0"
+	},
+	"host": "api.uber.com",
+	"basePath": "/api/2.0",
+	"schemes": ["https"],
+	"consumes": ["application/json"],
+	"produces": ["application/json"],
+	"paths": {
+		"/files/content": {
+			"post": {
+				"tags": ["File"],
+				"summary": "upload a new file.",
+				"description": "upload a new file.",
+				"externalDocs": {
+					"description": "upload a new file.",
+					"url": "https://box-content.readme.io/#upload-a-file"
+				},
+				"operationId": "uploadFile",
+				"consumes": ["multipart/form-data"],
+				"produces": ["multipart/form-data"],
+				"parameters": [{
+                        "name": "latitude",
+                        "in": "query",
+                        "description": "Latitude component of location.",
+                        "required": true,
+                        "type": "number",
+                        "default": 123
+                    }],
+				"responses": {
+					"default": {
+						"description": "Unexpected error",
+						"schema": {
+							"type": "string",
+							"default": "Unexpected error"
+						}
+					}
+				}
+			}
+		}
+	}
+}

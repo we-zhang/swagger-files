@@ -1,0 +1,18 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"title": "abc",
+		"version": "1.0.0"
+	},
+	"paths": {
+		"/files/content": {
+			"get": {
+				"responses": {
+					"default": {
+						"description": "Unexpected error"
+					}
+				}
+			}
+		}
+	}
+}
